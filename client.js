@@ -15,6 +15,8 @@ const connect = function () {
   conn.on('connect', () => {
     console.log("Successfully connected to the server");
     conn.write('Name: MD2');
+    // conn.write("Move: up");
+    // setInterval(() => {conn.write("Move: right")},2000) ;
   });
 
   return conn;
