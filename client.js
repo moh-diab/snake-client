@@ -12,6 +12,11 @@ const connect = function () {
     console.log('Server says: ', data);
   });
 
+  conn.on('connect', () => {
+    console.log("Successfully connected to the server");
+    conn.write('Name: MD2');
+  });
+
   return conn;
 };
 
